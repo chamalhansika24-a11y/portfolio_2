@@ -180,6 +180,7 @@
             </div>
         </section>
 
+
         <!-- Projects Section (Detailed) -->
         <section class="section-padding projects-section" id="projects">
             <div class="container">
@@ -189,76 +190,86 @@
                     <p>A showcase of my technical, academic, and hands-on software development projects.</p>
                 </div>
                 
-                <div class="projects-grid" style="grid-template-columns: 1fr; gap: 40px;">
+                <div class="projects-grid">
                     
-                    <!-- Project 1 -->
-                    <article class="project-card" style="display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));">
-                        <div class="project-image" style="height: 100%; min-height: 250px; border-radius: var(--radius-md) 0 0 var(--radius-md);">
-                            <img src="img/pharma-project.png" alt="Pharmaceutical Management System project">
+                    <!-- Project 1: Pharmaceutical Management System -->
+                    <article class="project-card">
+                        <div class="project-image">
+                            <img src="img/pharma-project.png" alt="Pharmaceutical Management System project" loading="lazy">
                         </div>
-                        <div class="project-info" style="padding: 35px;">
-                            <div style="display: flex; justify-content: space-between; align-items: center;">
-                                <span class="project-category">FULL STACK / DBMS</span>
+                        <div class="project-info">
+                            <div style="display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 10px;">
+                                <span class="project-category" style="font-size: 11px; letter-spacing: 1px; font-weight: 600; color: #20c982;">FULL STACK / DBMS</span>
                                 <span style="font-size: 11px; color: var(--muted);"><i class="fa-solid fa-university"></i> CSC 209 2.0 Project</span>
                             </div>
                             
-                            <h3 style="font-size: 1.5rem; margin-top: 15px;">Pharmaceutical Import & Distribution Management System</h3>
-                            <p style="margin-bottom: 20px;">
-                                Comprehensive web-based database management system designed for pharmaceutical import and distribution in Sri Lanka, featuring role-based access, real-time inventory tracking, and business analytics.
+                            <h3>Pharmaceutical Import & Distribution Management System</h3>
+                            <p>
+                                Comprehensive web-based database management system designed for pharmaceutical import and distribution operations in Sri Lanka. Engineered with strict entity-relationship constraints, role-based access control, real-time inventory tracking, and executive analytics dashboards.
                             </p>
                             
-                            <div style="margin-bottom: 25px;">
-                                <strong style="color: var(--text); font-size: 13px; display: block; margin-bottom: 10px;">Key Features & Implementation:</strong>
-                                <ul style="list-style: none; color: var(--muted); font-size: 13px; line-height: 1.8;">
-                                    <li><i class="fa-solid fa-angle-right" style="color: var(--primary); margin-right: 8px;"></i> Client Management (Constraints for Hospitals & Pharmacies).</li>
-                                    <li><i class="fa-solid fa-angle-right" style="color: var(--primary); margin-right: 8px;"></i> Real-time inventory control, batch expiry alerts & stock adjustments.</li>
-                                    <li><i class="fa-solid fa-angle-right" style="color: var(--primary); margin-right: 8px;"></i> Business Analytics: Revenue reports, top clients & risk alerts.</li>
+                            <div style="margin-top: 15px; margin-bottom: 20px;">
+                                <strong style="color: var(--text, #fff); font-size: 13px; display: block; margin-bottom: 10px;">Key Technical Highlights:</strong>
+                                <ul style="list-style: none; padding: 0; color: var(--muted); font-size: 13px; line-height: 1.8;">
+                                    <li><i class="fa-solid fa-angle-right" style="color: var(--primary, #20c982); margin-right: 8px;"></i> <strong>Client Entity Management:</strong> Enforced specialized constraints for Hospitals vs. Pharmacies with dynamic registration logic.</li>
+                                    <li><i class="fa-solid fa-angle-right" style="color: var(--primary, #20c982); margin-right: 8px;"></i> <strong>Stock & Expiry Tracking:</strong> Real-time inventory status, batch expiry risk alerts, and automated stock reorder point calculations.</li>
+                                    <li><i class="fa-solid fa-angle-right" style="color: var(--primary, #20c982); margin-right: 8px;"></i> <strong>Business Analytics:</strong> Complex SQL queries powering client purchase metrics, revenue breakdowns, and high-risk client flags.</li>
                                 </ul>
                             </div>
 
                             <div class="project-tags">
-                                <span>PHP</span><span>MySQL</span><span>HTML5 / CSS3</span><span>JavaScript</span><span>ER Diagram</span>
+                                <span>PHP</span>
+                                <span>MySQL</span>
+                                <span>HTML5 / CSS3</span>
+                                <span>JavaScript</span>
+                                <span>Relational Schema (ERD)</span>
+                                <span>SQL Analytics</span>
                             </div>
                             
-                            <div style="margin-top: 30px; display: flex; gap: 12px; flex-wrap: wrap;">
-                                <a href="https://github.com/chamalhansika24-a11y/Pharmaceutical-Import-Distribution-Management-System.git" target="_blank" class="button button-secondary" style="padding: 10px 18px;"><i class="fa-brands fa-github"></i> GitHub Repo</a>
-                                <a href="https://lnkd.in/p/gTu4SSMD" target="_blank" class="button button-primary" style="padding: 10px 18px;"><i class="fa-brands fa-linkedin"></i> LinkedIn Post</a>
+                            <div style="margin-top: 25px; display: flex; gap: 12px; flex-wrap: wrap;">
+                                <a href="https://github.com/chamalhansika24-a11y/Pharmaceutical-Import-Distribution-Management-System.git" target="_blank" class="button button-secondary" style="padding: 10px 18px; font-size: 12px;"><i class="fa-brands fa-github"></i> GitHub Repo</a>
+                                <a href="https://lnkd.in/p/gTu4SSMD" target="_blank" class="button button-primary" style="padding: 10px 18px; font-size: 12px;"><i class="fa-brands fa-linkedin"></i> LinkedIn Post</a>
                             </div>
                         </div>
                     </article>
 
-                    <!-- Project 2 -->
-                    <article class="project-card" style="display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));">
-                        <div class="project-image" style="height: 100%; min-height: 250px; border-radius: var(--radius-md) 0 0 var(--radius-md);">
-                            <img src="img/evoting-project.jpeg" alt="Electronic voting system project">
+                    <!-- Project 2: Distributed E-Voting System -->
+                    <article class="project-card">
+                        <div class="project-image">
+                            <img src="img/evoting-project.jpeg" alt="Electronic voting system project" loading="lazy">
                         </div>
-                        <div class="project-info" style="padding: 35px;">
-                            <div style="display: flex; justify-content: space-between; align-items: center;">
-                                <span class="project-category">MICROSERVICES / BLOCKCHAIN</span>
+                        <div class="project-info">
+                            <div style="display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 10px;">
+                                <span class="project-category" style="font-size: 11px; letter-spacing: 1px; font-weight: 600; color: #20c982;">MICROSERVICES / BLOCKCHAIN</span>
                                 <span style="font-size: 11px; color: var(--muted);"><i class="fa-solid fa-university"></i> Research Project</span>
                             </div>
                             
-                            <h3 style="font-size: 1.5rem; margin-top: 15px;">Distributed E-Voting System</h3>
-                            <p style="margin-bottom: 20px;">
-                                A secure, decentralized electronic voting system eliminating single points of failure by combining passwordless WebAuthn biometric authentication with Ethereum smart contract immutability.
+                            <h3>Distributed E-Voting System</h3>
+                            <p>
+                                A fault-tolerant, decentralized electronic voting architecture designed to eliminate single points of failure. Combines WebAuthn biometric passwordless authentication with Ethereum smart contract immutability to ensure verifiable and tamper-proof elections.
                             </p>
                             
-                            <div style="margin-bottom: 25px;">
-                                <strong style="color: var(--text); font-size: 13px; display: block; margin-bottom: 10px;">Key Features & Architecture:</strong>
-                                <ul style="list-style: none; color: var(--muted); font-size: 13px; line-height: 1.8;">
-                                    <li><i class="fa-solid fa-angle-right" style="color: var(--primary); margin-right: 8px;"></i> <strong>Auth:</strong> WebAuthn biometric login, CSV registration & JWT.</li>
-                                    <li><i class="fa-solid fa-angle-right" style="color: var(--primary); margin-right: 8px;"></i> <strong>Core:</strong> Ethereum Smart Contract execution & double-voting prevention.</li>
-                                    <li><i class="fa-solid fa-angle-right" style="color: var(--primary); margin-right: 8px;"></i> <strong>Results:</strong> Decoupled real-time election analytics reading from blockchain.</li>
-                                    <li><i class="fa-solid fa-angle-right" style="color: var(--primary); margin-right: 8px;"></i> Automated DevSecOps CI/CD verification with GitHub Actions.</li>
+                            <div style="margin-top: 15px; margin-bottom: 20px;">
+                                <strong style="color: var(--text, #fff); font-size: 13px; display: block; margin-bottom: 10px;">Key Technical Highlights:</strong>
+                                <ul style="list-style: none; padding: 0; color: var(--muted); font-size: 13px; line-height: 1.8;">
+                                    <li><i class="fa-solid fa-angle-right" style="color: var(--primary, #20c982); margin-right: 8px;"></i> <strong>Biometric Authentication:</strong> Passwordless WebAuthn implementation integrated with CSV batch registration & JWT security.</li>
+                                    <li><i class="fa-solid fa-angle-right" style="color: var(--primary, #20c982); margin-right: 8px;"></i> <strong>Smart Contract Immutability:</strong> Solidity contracts deployed on Ganache preventing double-voting and illegal state modifications.</li>
+                                    <li><i class="fa-solid fa-angle-right" style="color: var(--primary, #20c982); margin-right: 8px;"></i> <strong>Decoupled Analytics & CI/CD:</strong> Real-time blockchain event listener service paired with automated DevSecOps pipelines via GitHub Actions.</li>
                                 </ul>
                             </div>
 
                             <div class="project-tags">
-                                <span>Node.js</span><span>Python (FastAPI)</span><span>Solidity</span><span>Ganache</span><span>MongoDB</span><span>Docker</span><span>CI/CD</span>
+                                <span>Node.js</span>
+                                <span>Python (FastAPI)</span>
+                                <span>Solidity</span>
+                                <span>Ethereum / Ganache</span>
+                                <span>MongoDB</span>
+                                <span>Docker</span>
+                                <span>GitHub Actions CI/CD</span>
                             </div>
                             
-                            <div style="margin-top: 30px; display: flex; gap: 12px; flex-wrap: wrap;">
-                                <a href="https://github.com/chamalhansika24-a11y/E-Voting-FullSystem.git" target="_blank" class="button button-secondary" style="padding: 10px 18px;"><i class="fa-brands fa-github"></i> GitHub Repo</a>
+                            <div style="margin-top: 25px; display: flex; gap: 12px; flex-wrap: wrap;">
+                                <a href="https://github.com/chamalhansika24-a11y/E-Voting-FullSystem.git" target="_blank" class="button button-secondary" style="padding: 10px 18px; font-size: 12px;"><i class="fa-brands fa-github"></i> GitHub Repo</a>
                             </div>
                         </div>
                     </article>
@@ -310,6 +321,8 @@
             </div>
         </section>
 
+        
+
         <!-- Certificates & Industry Visits (Detailed) -->
         <section class="section-padding experience-section" id="experience">
             <div class="container">
@@ -326,8 +339,16 @@
                         <div class="experience-image"><img src="img/cloud-foundation.JPG" alt="AWS Cloud Foundations" loading="lazy"></div>
                         <div class="experience-info">
                             <span class="project-category">AWS ACADEMY (SEP 11, 2026)</span>
-                            <h3 style="margin-top: 5px; font-size: 1.2rem;">Cloud Foundations</h3>
-                            <a href="https://www.credly.com/badges/d4433394-daaa-4cc4-ad8e-3bd918f082e4/public_url" target="_blank" class="button button-secondary" style="margin-top: 15px; padding: 8px 12px; font-size: 11px;"><i class="fa-solid fa-arrow-up-right-from-square"></i> Verify Badge</a>
+                            <h3 style="margin-top: 5px; font-size: 1.2rem;">AWS Academy Graduate - AWS Academy Cloud Foundations</h3>
+                            <p style="margin-top: 10px; margin-bottom: 12px; font-size: 13px; line-height: 1.5; color: #a0aec0;">
+                                Gained foundational understanding of AWS Cloud concepts, core services, security, architecture, pricing, and technical support model. Explored cloud deployment frameworks and hands-on lab environments.
+                            </p>
+                            <ul style="font-size: 12px; color: #cbd5e0; margin-bottom: 15px; padding-left: 18px; line-height: 1.6;">
+                                <li>Core Infrastructure & Global Architecture</li>
+                                <li>Identity & Access Management (IAM) basics</li>
+                                <li>Billing, Pricing Models & Support</li>
+                            </ul>
+                            <a href="https://www.credly.com/badges/d4433394-daaa-4cc4-ad8e-3bd918f082e4/public_url" target="_blank" class="button button-secondary" style="padding: 8px 12px; font-size: 11px;"><i class="fa-solid fa-arrow-up-right-from-square"></i> Verify Badge</a>
                         </div>
                     </article>
 
@@ -336,18 +357,34 @@
                         <div class="experience-image"><img src="img/cloud-security.JPG" alt="AWS Cloud Security Builder" loading="lazy"></div>
                         <div class="experience-info">
                             <span class="project-category">AWS ACADEMY (SEP 20, 2026)</span>
-                            <h3 style="margin-top: 5px; font-size: 1.2rem;">Cloud Security Builder</h3>
-                            <a href="https://www.credly.com/badges/766f99bb-85bd-415d-b571-d429f887542c/public_url" target="_blank" class="button button-secondary" style="margin-top: 15px; padding: 8px 12px; font-size: 11px;"><i class="fa-solid fa-arrow-up-right-from-square"></i> Verify Badge</a>
+                            <h3 style="margin-top: 5px; font-size: 1.2rem;">AWS Academy Graduate - Cloud Security Builder</h3>
+                            <p style="margin-top: 10px; margin-bottom: 12px; font-size: 13px; line-height: 1.5; color: #a0aec0;">
+                                Developed practical knowledge in securing AWS workloads, managing cryptographic keys, implementing network boundary protection, and configuring identity policies for cloud resilience.
+                            </p>
+                            <ul style="font-size: 12px; color: #cbd5e0; margin-bottom: 15px; padding-left: 18px; line-height: 1.6;">
+                                <li>VPC Security Groups & Network ACLs</li>
+                                <li>Data Encryption at Rest and in Transit</li>
+                                <li>Compliance Standards & Incident Response</li>
+                            </ul>
+                            <a href="https://www.credly.com/badges/766f99bb-85bd-415d-b571-d429f887542c/public_url" target="_blank" class="button button-secondary" style="padding: 8px 12px; font-size: 11px;"><i class="fa-solid fa-arrow-up-right-from-square"></i> Verify Badge</a>
                         </div>
                     </article>
 
-                    <!-- AWS Card 3: Cloud Security Foundations -->
+                    <!-- AWS Card 3: Security Foundations -->
                     <article class="experience-card">
                         <div class="experience-image"><img src="img/security-foundation.JPG" alt="AWS Cloud Security Foundations" loading="lazy"></div>
                         <div class="experience-info">
                             <span class="project-category">AWS ACADEMY (AUG 01, 2026)</span>
-                            <h3 style="margin-top: 5px; font-size: 1.2rem;">Security Foundations</h3>
-                            <a href="https://www.credly.com/badges/a68474c3-77ed-4bdd-b4b2-99fd701bcaac/public_url" target="_blank" class="button button-secondary" style="margin-top: 15px; padding: 8px 12px; font-size: 11px;"><i class="fa-solid fa-arrow-up-right-from-square"></i> Verify Badge</a>
+                            <h3 style="margin-top: 5px; font-size: 1.2rem;">AWS Academy Graduate - AWS Academy Security Foundations</h3>
+                            <p style="margin-top: 10px; margin-bottom: 12px; font-size: 13px; line-height: 1.5; color: #a0aec0;">
+                                Mastered fundamental principles of cloud security, the Shared Responsibility Model, AWS identity mechanisms, risk management, and proactive threat mitigation strategies.
+                            </p>
+                            <ul style="font-size: 12px; color: #cbd5e0; margin-bottom: 15px; padding-left: 18px; line-height: 1.6;">
+                                <li>AWS Shared Responsibility Model</li>
+                                <li>Audit Trails via AWS CloudTrail & CloudWatch</li>
+                                <li>Access Control Policies & Least Privilege</li>
+                            </ul>
+                            <a href="https://www.credly.com/badges/a68474c3-77ed-4bdd-b4b2-99fd701bcaac/public_url" target="_blank" class="button button-secondary" style="padding: 8px 12px; font-size: 11px;"><i class="fa-solid fa-arrow-up-right-from-square"></i> Verify Badge</a>
                         </div>
                     </article>
 
@@ -356,8 +393,16 @@
                         <div class="experience-image"><img src="img/cicd.JPG" alt="AWS Microservices" loading="lazy"></div>
                         <div class="experience-info">
                             <span class="project-category">AWS ACADEMY (AUG 27, 2026)</span>
-                            <h3 style="margin-top: 5px; font-size: 1.2rem;">Microservices & CI/CD</h3>
-                            <a href="https://www.credly.com/badges/4bfa66ce-47f6-4e00-a85f-3a08b4c63732/public_url" target="_blank" class="button button-secondary" style="margin-top: 15px; padding: 8px 12px; font-size: 11px;"><i class="fa-solid fa-arrow-up-right-from-square"></i> Verify Badge</a>
+                            <h3 style="margin-top: 5px; font-size: 1.2rem;">AWS Academy Graduate - Microservices & CI/CD Pipeline</h3>
+                            <p style="margin-top: 10px; margin-bottom: 12px; font-size: 13px; line-height: 1.5; color: #a0aec0;">
+                                Focused on modern DevOps workflows, containerized application deployment, automated testing integration, and continuous integration/continuous delivery (CI/CD) practices on AWS.
+                            </p>
+                            <ul style="font-size: 12px; color: #cbd5e0; margin-bottom: 15px; padding-left: 18px; line-height: 1.6;">
+                                <li>Container Deployment (Docker / ECS)</li>
+                                <li>Automated Build & Deployment Pipelines</li>
+                                <li>Microservices Architecture Best Practices</li>
+                            </ul>
+                            <a href="https://www.credly.com/badges/4bfa66ce-47f6-4e00-a85f-3a08b4c63732/public_url" target="_blank" class="button button-secondary" style="padding: 8px 12px; font-size: 11px;"><i class="fa-solid fa-arrow-up-right-from-square"></i> Verify Badge</a>
                         </div>
                     </article>
 
@@ -367,7 +412,14 @@
                         <div class="experience-info">
                             <span class="project-category">INDUSTRY VISIT (MAY 2026)</span>
                             <h3 style="margin-top: 5px; font-size: 1.2rem;">Industrial Visit - Codimite</h3>
-                            <p style="margin-bottom: 15px; font-size: 13px;">Explored modern cloud technologies and software engineering practices used at Codimite.</p>
+                            <p style="margin-top: 10px; margin-bottom: 12px; font-size: 13px; line-height: 1.5; color: #a0aec0;">
+                                Engaged with cloud engineering professionals at Codimite to explore real-world cloud migrations, multi-cloud management, and enterprise software scalability.
+                            </p>
+                            <ul style="font-size: 12px; color: #cbd5e0; margin-bottom: 15px; padding-left: 18px; line-height: 1.6;">
+                                <li>Cloud Architecture & Infrastructure Operations</li>
+                                <li>Agile Software Delivery Methodologies</li>
+                                <li>Interaction with Industry Tech Leads</li>
+                            </ul>
                             <a href="https://lnkd.in/p/gpagppZM" target="_blank" class="button button-secondary" style="padding: 8px 12px; font-size: 11px;"><i class="fa-brands fa-linkedin"></i> LinkedIn Post</a>
                         </div>
                     </article>
@@ -377,8 +429,15 @@
                         <div class="experience-image"><img src="img/lseg-visit.jpeg" alt="LSEG industry visit" loading="lazy"></div>
                         <div class="experience-info">
                             <span class="project-category">INDUSTRY VISIT (OCT 2026)</span>
-                            <h3 style="margin-top: 5px; font-size: 1.2rem;">Industrial Visit - LSEG</h3>
-                            <p style="margin-bottom: 15px; font-size: 13px;">Gained exposure to real-world corporate culture and global financial tech operations.</p>
+                            <h3 style="margin-top: 5px; font-size: 1.2rem;">Industrial Visit - London Stock Exchange Group (LSEG)</h3>
+                            <p style="margin-top: 10px; margin-bottom: 12px; font-size: 13px; line-height: 1.5; color: #a0aec0;">
+                                Gained deep technical insights into high-frequency trading platforms, financial technology infrastructure, enterprise cybersecurity protocols, and corporate engineering culture.
+                            </p>
+                            <ul style="font-size: 12px; color: #cbd5e0; margin-bottom: 15px; padding-left: 18px; line-height: 1.6;">
+                                <li>FinTech Systems & Mission-Critical Infrastructure</li>
+                                <li>Enterprise-level Cyber Security Operations</li>
+                                <li>Global Corporate Workflows & Career Insights</li>
+                            </ul>
                             <a href="https://lnkd.in/p/gKWC3Xe8" target="_blank" class="button button-secondary" style="padding: 8px 12px; font-size: 11px;"><i class="fa-brands fa-linkedin"></i> LinkedIn Post</a>
                         </div>
                     </article>
@@ -386,6 +445,7 @@
                 </div>
             </div>
         </section>
+
 
         <!-- Contact Section -->
         <section class="section-padding contact-section" id="contact">
