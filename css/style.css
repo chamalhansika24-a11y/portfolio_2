@@ -1,0 +1,582 @@
+/* =========================================
+   CHAMAL HANSIKA - PORTFOLIO
+   Theme: Midnight Dark + Emerald Green + Grid
+========================================= */
+
+/* =========================================
+   1. COLOR VARIABLES & GLOBAL STYLES
+========================================= */
+
+:root {
+    --bg: #0B110E;           /* Deep Dark Green/Black Background */
+    --bg-secondary: #121A16; /* Slightly Lighter */
+    --surface: #18241E;
+    --surface-light: #22332A;
+
+    --text: #F3FFF7;
+    --muted: #A5B8AD;
+    --muted-light: #C4D5CA;
+
+    --primary: #20C982;       /* Vibrant Emerald Green */
+    --primary-light: #42E695; /* Light Green */
+    --accent-light: #9DE9BD;  /* Mint Green */
+    --primary-dark: #129B60;
+
+    --border: rgba(32, 201, 130, 0.16);
+    --border-hover: rgba(32, 201, 130, 0.45);
+
+    --gradient: linear-gradient(
+        110deg,
+        #20C982 0%,
+        #42E695 100%
+    );
+
+    --container-width: 1120px;
+    --nav-height: 78px;
+
+    --radius-sm: 6px;
+    --radius-md: 12px;
+    --radius-lg: 20px;
+
+    --transition: 0.3s ease;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+    scroll-padding-top: 95px;
+}
+
+body {
+    font-family: 'Inter', sans-serif;
+    background: var(--bg);
+    color: var(--text);
+    line-height: 1.7;
+    overflow-x: hidden;
+    -webkit-font-smoothing: antialiased;
+    position: relative; /* Added for grid */
+}
+
+/* Background Grid Pattern */
+body::before {
+    content: "";
+    position: fixed;
+    inset: 0;
+    z-index: -1;
+    background-image:
+        linear-gradient(rgba(32, 201, 130, 0.04) 1px, transparent 1px),
+        linear-gradient(90deg, rgba(32, 201, 130, 0.04) 1px, transparent 1px);
+    background-size: 45px 45px;
+    pointer-events: none;
+}
+
+body, button, a {
+    -webkit-tap-highlight-color: transparent;
+}
+
+img {
+    display: block;
+    max-width: 100%;
+}
+
+a {
+    color: inherit;
+    text-decoration: none;
+}
+
+button {
+    font: inherit;
+    cursor: pointer;
+}
+
+::selection {
+    color: #0B110E;
+    background: var(--primary);
+}
+
+.container {
+    width: min(var(--container-width), calc(100% - 48px));
+    margin-inline: auto;
+}
+
+
+/* =========================================
+   2. NAVIGATION BAR
+========================================= */
+
+.navbar {
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+    background: rgba(11, 17, 14, 0.95);
+    backdrop-filter: blur(18px);
+    -webkit-backdrop-filter: blur(18px);
+    border-bottom: 1px solid var(--border);
+}
+
+.nav-content {
+    min-height: var(--nav-height);
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 24px;
+}
+
+.logo {
+    display: inline-flex;
+    align-items: center;
+    gap: 12px;
+    font-size: 15px;
+    font-weight: 700;
+    letter-spacing: -0.3px;
+    white-space: nowrap;
+}
+
+.logo-mark {
+    width: 40px;
+    height: 40px;
+    display: grid;
+    place-items: center;
+    border-radius: 8px;
+    background: var(--primary);
+    color: #0B110E;
+    font-weight: 800;
+    font-size: 14px;
+    box-shadow: 0 5px 20px rgba(32, 201, 130, 0.25);
+}
+
+.nav-links {
+    display: flex;
+    align-items: center;
+    gap: 25px;
+}
+
+.nav-links a {
+    position: relative;
+    color: var(--muted);
+    font-size: 13px;
+    font-weight: 500;
+    transition: color var(--transition);
+}
+
+.nav-links a::after {
+    content: "";
+    position: absolute;
+    left: 0;
+    bottom: -6px;
+    width: 0;
+    height: 2px;
+    background: var(--primary);
+    border-radius: 2px;
+    transition: width var(--transition);
+}
+
+.nav-links a:hover, .nav-links a.active {
+    color: var(--text);
+}
+
+.nav-links a:hover::after {
+    width: 100%;
+}
+
+.menu-toggle {
+    display: none;
+    width: 42px;
+    height: 42px;
+    align-items: center;
+    justify-content: center;
+    background: var(--surface);
+    border: 1px solid var(--border);
+    border-radius: var(--radius-sm);
+    color: var(--text);
+    font-size: 17px;
+    cursor: pointer;
+}
+
+
+/* =========================================
+   3. HERO SECTION (NEW LAYOUT)
+========================================= */
+
+.hero {
+    position: relative;
+    padding: 100px 0 80px;
+    display: flex;
+    align-items: center;
+    min-height: calc(100svh - 150px);
+}
+
+.hero-content {
+    display: grid;
+    grid-template-columns: 1.1fr 0.9fr;
+    align-items: center;
+    gap: 50px;
+}
+
+.hero-text {
+    position: relative;
+    z-index: 2;
+    animation: fadeIn 0.8s ease both;
+}
+
+.hello-text {
+    font-size: clamp(28px, 4vw, 36px);
+    font-weight: 700;
+    margin-bottom: 5px;
+    color: var(--text);
+}
+
+.accent-dot {
+    color: var(--primary);
+}
+
+.name-badge {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    margin-bottom: 25px;
+}
+
+.name-badge .line {
+    width: 50px;
+    height: 2px;
+    background: var(--primary);
+}
+
+.name-badge .name {
+    font-size: clamp(22px, 3.5vw, 32px);
+    font-weight: 500;
+    color: var(--text);
+}
+
+.hero h1 {
+    font-size: clamp(40px, 5.5vw, 65px);
+    font-weight: 800;
+    line-height: 1.15;
+    letter-spacing: -1.5px;
+    margin-bottom: 35px;
+    color: var(--text);
+}
+
+/* Buttons */
+.hero-actions {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    flex-wrap: wrap;
+}
+
+.button {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+    padding: 14px 24px;
+    border-radius: var(--radius-sm);
+    font-size: 13px;
+    font-weight: 600;
+    transition: all var(--transition);
+}
+
+.button-primary {
+    background: var(--primary);
+    color: #0B110E;
+    border: 1px solid var(--primary);
+    box-shadow: 0 8px 25px rgba(32, 201, 130, 0.25);
+}
+
+.button-primary:hover {
+    background: var(--primary-light);
+    border-color: var(--primary-light);
+    transform: translateY(-2px);
+}
+
+.button-secondary {
+    background: transparent;
+    color: var(--text);
+    border: 1px solid var(--border-hover);
+}
+
+.button-secondary:hover {
+    border-color: var(--primary);
+    background: rgba(32, 201, 130, 0.05);
+    transform: translateY(-2px);
+}
+
+
+/* =========================================
+   4. HERO VISUAL (CIRCLES & PHOTO)
+========================================= */
+
+.hero-visual {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    animation: fadeIn 1s ease both;
+}
+
+.visual-wrapper {
+    position: relative;
+    width: 100%;
+    max-width: 400px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.circle-bg {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 320px;
+    height: 320px;
+    border: 4px solid var(--primary);
+    border-radius: 50%;
+    z-index: 0;
+    box-shadow: 0 0 50px rgba(32, 201, 130, 0.15);
+}
+
+.circle-bg::before {
+    content: "";
+    position: absolute;
+    top: -35px; left: -35px; right: -35px; bottom: -35px;
+    border: 1px solid rgba(32, 201, 130, 0.3);
+    border-radius: 50%;
+}
+
+.profile-photo {
+    position: relative;
+    z-index: 1;
+    width: 280px;
+    height: 280px;
+    object-fit: cover;
+    border-radius: 50%;
+    border: 6px solid var(--bg);
+}
+
+/* Decorative Chevrons */
+.chevron {
+    position: absolute;
+    color: var(--primary);
+    font-size: 24px;
+    opacity: 0.6;
+    z-index: 0;
+}
+
+.chevron.left {
+    left: 10px;
+    top: 20%;
+}
+
+.chevron.right {
+    right: 10px;
+    bottom: 20%;
+}
+
+
+/* =========================================
+   5. TECH STACK BANNER
+========================================= */
+.tech-banner {
+    width: 100%;
+    background: var(--bg-secondary);
+    border-top: 1px solid var(--border);
+    border-bottom: 1px solid var(--border);
+    padding: 25px 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: clamp(20px, 5vw, 60px);
+    flex-wrap: wrap;
+    margin-bottom: 50px;
+}
+
+.tech-banner span {
+    color: var(--muted);
+    font-size: 14px;
+    font-weight: 600;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    transition: color var(--transition);
+}
+
+.tech-banner span:hover {
+    color: var(--primary);
+}
+
+
+/* =========================================
+   6. ABOUT SECTION & CARDS
+========================================= */
+.section-padding { padding: 100px 0; }
+
+.section-heading { max-width: 650px; margin: 0 auto 60px; text-align: center; }
+.section-label {
+    display: inline-block;
+    margin-bottom: 12px;
+    color: var(--primary);
+    font-size: 12px;
+    font-weight: 700;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+}
+.section-heading h2 { margin-bottom: 15px; font-size: clamp(2.3rem, 5vw, 3.2rem); font-weight: 800; }
+.section-heading > p { color: var(--muted); line-height: 1.8; }
+.gradient-text { color: var(--primary); }
+
+.about-grid { display: grid; grid-template-columns: 1.15fr 0.85fr; align-items: center; gap: 65px; }
+.about-content h3 { margin-bottom: 25px; font-size: clamp(1.7rem, 3vw, 2.3rem); }
+.about-content > p { margin-bottom: 20px; color: var(--muted); font-size: 0.98rem; line-height: 1.95; }
+.about-highlights { display: grid; gap: 20px; }
+
+.highlight-card, .education-card, .project-card, .skill-card, .experience-card {
+    background: var(--surface);
+    border: 1px solid rgba(32, 201, 130, 0.1);
+    border-radius: var(--radius-md);
+    transition: transform 0.3s ease, border-color 0.3s ease;
+}
+
+.highlight-card:hover, .education-card:hover, .project-card:hover, .skill-card:hover, .experience-card:hover {
+    transform: translateY(-5px);
+    border-color: var(--primary);
+}
+
+.highlight-card {
+    display: flex;
+    align-items: flex-start;
+    gap: 18px;
+    padding: 25px;
+}
+.highlight-icon, .education-icon, .skill-icon {
+    display: flex; flex-shrink: 0; align-items: center; justify-content: center;
+    width: 50px; height: 50px;
+    color: var(--primary);
+    background: rgba(32, 201, 130, 0.1);
+    border-radius: 12px; font-size: 1.25rem;
+}
+.highlight-card h4 { margin: 3px 0 9px; color: var(--text); font-size: 1rem; }
+.highlight-card p { color: var(--muted); font-size: 0.88rem; line-height: 1.7; }
+
+/* =========================
+   EDUCATION
+========================= */
+.education-card {
+    display: flex; align-items: flex-start; gap: 25px;
+    max-width: 850px; margin: 0 auto; padding: 30px;
+}
+.education-status, .project-category {
+    display: inline-block; color: var(--primary); font-size: 0.72rem; font-weight: 800; letter-spacing: 1.5px;
+}
+.education-details h3 { margin: 10px 0 5px; font-size: 1.3rem; }
+.education-details h4 { margin-bottom: 12px; color: var(--accent-light); font-size: 0.95rem; }
+.education-details p { color: var(--muted); line-height: 1.8; font-size: 0.95rem; }
+
+/* =========================
+   PROJECTS & SKILLS
+========================= */
+.projects-grid { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 28px; }
+.project-image, .experience-image { position: relative; height: 230px; overflow: hidden; border-radius: var(--radius-md) var(--radius-md) 0 0; }
+.project-image img, .experience-image img { width: 100%; height: 100%; display: block; object-fit: cover; transition: transform 0.5s ease; }
+.project-card:hover .project-image img, .experience-card:hover .experience-image img { transform: scale(1.05); }
+
+.project-info, .experience-info { padding: 25px; }
+.project-info h3, .experience-info h3 { margin: 10px 0; font-size: 1.25rem; line-height: 1.5; }
+.project-info > p, .experience-info > p { color: var(--muted); font-size: 0.9rem; line-height: 1.7; }
+
+.project-tags { display: flex; flex-wrap: wrap; gap: 8px; margin-top: 20px; }
+.project-tags span {
+    padding: 6px 12px; color: var(--accent-light);
+    background: rgba(32, 201, 130, 0.08); border: 1px solid rgba(32, 201, 130, 0.2);
+    border-radius: 30px; font-size: 0.75rem;
+}
+
+.skills-grid { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 20px; }
+.skill-card { padding: 25px; }
+.skill-card h3 { margin: 18px 0 10px; font-size: 1.05rem; }
+.skill-card p { color: var(--muted); font-size: 0.9rem; line-height: 1.7; }
+
+.experience-grid { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 22px; }
+.experience-image { height: 190px; }
+.experience-info h3 { font-size: 1.1rem; }
+
+/* =========================
+   CONTACT & FOOTER
+========================= */
+.contact-card {
+    max-width: 850px; margin: 0 auto; padding: 60px 30px; text-align: center;
+    background: radial-gradient(ellipse at top, rgba(32, 201, 130, 0.1), transparent 60%), var(--surface);
+    border: 1px solid rgba(32, 201, 130, 0.15); border-radius: 20px;
+}
+.contact-card h2 { margin: 15px 0; font-size: clamp(2rem, 4vw, 3rem); }
+.contact-card > p { max-width: 580px; margin: 0 auto; color: var(--muted); }
+
+.contact-links { display: flex; justify-content: center; flex-wrap: wrap; gap: 15px; margin-top: 30px; }
+.contact-link {
+    display: inline-flex; align-items: center; gap: 10px; padding: 12px 18px;
+    color: var(--text); background: var(--bg);
+    border: 1px solid rgba(32, 201, 130, 0.2); border-radius: var(--radius-sm);
+    font-size: 0.88rem; transition: background 0.3s ease, border-color 0.3s ease;
+}
+.contact-link:hover { background: rgba(32, 201, 130, 0.1); border-color: var(--primary); }
+.contact-link > i:first-child { color: var(--primary); }
+
+.site-footer {
+    padding: 25px 0; background: var(--bg);
+    border-top: 1px solid rgba(32, 201, 130, 0.1);
+}
+.footer-content { display: flex; align-items: center; justify-content: space-between; gap: 20px; }
+.footer-content > p { color: var(--muted); font-size: 0.85rem; }
+.back-to-top {
+    display: flex; align-items: center; justify-content: center;
+    width: 40px; height: 40px; color: var(--primary);
+    background: rgba(32, 201, 130, 0.1); border: 1px solid rgba(32, 201, 130, 0.2);
+    border-radius: var(--radius-sm); transition: background 0.3s ease;
+}
+.back-to-top:hover { background: rgba(32, 201, 130, 0.2); }
+
+/* =========================
+   KEYFRAMES & RESPONSIVE
+========================= */
+@keyframes fadeIn {
+    from { opacity: 0; transform: translateY(15px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+
+@media (max-width: 900px) {
+    .hero-content { grid-template-columns: 1fr; text-align: center; gap: 60px; }
+    .name-badge, .hero-actions { justify-content: center; }
+    .hero-visual { order: -1; } /* Moves image above text on mobile */
+    .about-grid { grid-template-columns: 1fr; gap: 40px; }
+    .skills-grid { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+    .experience-grid { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+}
+
+@media (max-width: 760px) {
+    .menu-toggle { display: inline-flex; }
+    .nav-links {
+        display: none; position: absolute; top: 78px; left: 0; right: 0;
+        flex-direction: column; background: var(--surface); padding: 15px 25px;
+        border-bottom: 1px solid var(--border); box-shadow: 0 10px 20px rgba(0,0,0,0.5);
+    }
+    .nav-links.active { display: flex; }
+    .nav-links a { padding: 12px 0; border-bottom: 1px solid var(--border); width: 100%; }
+    .nav-links a::after { display: none; }
+    
+    .hero h1 { font-size: 38px; }
+    .circle-bg { width: 280px; height: 280px; }
+    .profile-photo { width: 240px; height: 240px; }
+}
+
+@media (max-width: 600px) {
+    .projects-grid, .skills-grid, .experience-grid { grid-template-columns: 1fr; }
+    .education-card { flex-direction: column; padding: 20px; }
+    .contact-links { flex-direction: column; }
+    .footer-content { flex-wrap: wrap; justify-content: center; text-align: center; }
+}
